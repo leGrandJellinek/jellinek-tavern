@@ -1,0 +1,22 @@
+.header
+    margin-bottom: 50px
+    &__nav
+        background: #1b1d2a
+        padding-top:20px 
+        padding-bottom: 20px
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px
+        &-container 
+            @extend .container
+            display: flex
+            justify-content: space-between
+            align-items: center
+            & a.logo
+                display: flex
+                align-items: center
+        &-menu 
+            display: flex
+            gap: 27px
+        &-link 
+            transition: color 500ms ease
+            &:hover
+                color: #657ef8

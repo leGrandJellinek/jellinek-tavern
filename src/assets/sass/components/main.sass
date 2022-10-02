@@ -1,0 +1,57 @@
+.main 
+    &__container
+        @extend .container
+    &__search
+        display: flex
+        flex-direction: column
+        align-items: center
+        gap: 60px
+        &-input 
+            max-width: 480px
+            color: rgba(255, 255, 255, 0.85)
+            min-width: 310px
+        &-block-input 
+            padding: 15px
+            background: none
+            border-radius: 30px
+            border: 1px solid #657ef8
+            display: flex
+            align-items: center
+        &-icon 
+            cursor: pointer
+        &-block 
+            display: flex
+            flex-direction: column
+            gap: 30px
+        &-traveler 
+            display: flex
+            justify-content: center
+            gap: 20px
+        &-avatar
+            background: rgba(0,0,0,.3)
+            border-radius: 0.3em
+            & img
+                width: 100px
+                height: 100px
+        &-characters 
+            display: flex
+            justify-content: center
+            gap: 20px
+        &-character 
+            position: relative
+        &-charicon
+            cursor: pointer
+            border-radius: 4px 
+            background: #7961a1
+            & img 
+                width: 87px
+                height: 87px
+            &.rarityfive    
+                background: #bb8f66
+        &-charlvl
+            position: absolute
+            background: rgba(0,0,0,.6)
+            font-size: 11px
+            padding: 2px
+            right: 0
+            bottom: 0
