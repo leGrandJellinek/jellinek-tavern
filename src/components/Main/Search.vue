@@ -10,19 +10,21 @@ section.main__search
 </template>
 
 <script lang="ts">
+import { defineComponent } from "@vue/runtime-core"
 import {mapActions} from "vuex"
-export default {
+export default defineComponent({
     data(){
         return {
-            search: ""
+            search: "" as string
         }
     },
+
     methods: {
-        ...mapActions(["getUserInfo"]),
-        searchUser(){
-            this.getUserInfo(this.search);
-            this.search = ""
-        }
+         ...mapActions(["getUserInfo"]),
+        searchUser():void {
+            this.getUserInfo(this.search)
+            this.search = '';
+        },
     }
-}
+})
 </script>

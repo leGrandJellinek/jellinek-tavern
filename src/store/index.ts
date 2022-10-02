@@ -27,22 +27,22 @@ export default createStore({
     ]
   },
   getters: {
-    getMenuList(state){
+    getMenuList(state):Object[]{
       return state.menuList
     },
-    getTraveler(state){
+    getTraveler(state):Object | null{
       return state.user
     }
   },
   mutations: {
-    getUserInfo(state, user){
+    getUserInfo(state:any, user:object):void{
       console.log(user);
       state.user = user 
     }
   },
   actions: {
-    async getUserInfo({commit} , UID){
-      const user = await enka.fetchUser(UID);
+    async getUserInfo({commit} , UID:string):Promise<void>{
+      const user = await enka.fetchUser(+UID);
       commit("getUserInfo", user)
     }
   },

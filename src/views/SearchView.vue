@@ -11,8 +11,9 @@ main.main
 <script lang="ts">
 import Search from "@/components/Main/Search.vue"
 import SearchBlock from "@/components/Main/SearchBlock.vue"
+import { defineComponent } from "@vue/runtime-core"
 import {mapGetters} from "vuex"
-export default {
+export default defineComponent({
 components: {
     Search,
     SearchBlock
@@ -20,7 +21,7 @@ components: {
 computed: {
     ...mapGetters(["getTraveler"])
 }
-}
+})
 </script>
 
 <style >

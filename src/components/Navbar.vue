@@ -13,12 +13,13 @@ nav.header__nav
 </template>
 
 <script lang="ts">
+import { defineComponent } from "@vue/runtime-core"
 import {mapGetters} from "vuex"
-export default {
+export default defineComponent({
     computed: {
         ...mapGetters(["getMenuList"])
     }
-}
+})
 </script>
 
 <style lang="sass" scoped>

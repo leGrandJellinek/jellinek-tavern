@@ -5,11 +5,13 @@ header.header
 
 <script lang="ts">
 import Navbar from "@/components/Navbar.vue"
-export default {
+import { defineComponent } from "@vue/runtime-core"
+
+export default defineComponent({
     components: {
         Navbar
     }
-}
+})
 </script>
 
 <style>
