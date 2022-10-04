@@ -55,3 +55,67 @@
             padding: 2px
             right: 0
             bottom: 0
+    &__character
+        display: flex
+        &-skill
+            & img
+                width: 39px
+                height: 39px
+        &-constellation
+            & img
+                width: 30px
+                height: 30px
+        &-info
+            height: 475px
+            background: purple
+            padding: 20px
+            width: 442px
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            border-top-left-radius: 20px
+            border-bottom-left-radius: 20px
+            &-descr 
+                display: flex
+                flex-direction: column
+                gap: 15px
+        &-talents 
+            display: flex
+            justify-content: space-between
+        &-artefacts
+            height: 475px
+            padding: 10px
+            background: purple
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            width: 365px
+            border-top-right-radius: 20px
+            border-bottom-right-radius: 20px
+        &-artefact
+            background: rgba(0,0,0,.26)
+            border-radius: 0.3em
+            overflow: hidden
+            height: 82px
+            padding: 5px
+            display: flex
+        &-common-stats
+            background: purple
+            padding: 2% 1% 0.7em
+            width: 342px
+    &__artefact
+        &-left
+            position: relative
+            width: 110px
+            height: 100%
+            background: linear-gradient(270deg,rgba(0,0,0,.4) 0%,transparent 100%)
+            z-index: 2
+            & img.artefact-img
+                width: 135px
+                height: 135px
+                position: absolute
+                z-index: 1
+                top: -35px
+                left: -35px
+        &-right
+            height: 100%

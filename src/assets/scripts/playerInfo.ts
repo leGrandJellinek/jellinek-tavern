@@ -4,4 +4,3 @@
         //     const user = await enka.fetchUser(726865921);
         //     console.log(user);
         // })()
-

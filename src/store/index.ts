@@ -32,7 +32,7 @@ export default createStore({
     },
     getTraveler(state):Object | null{
       return state.user
-    }
+    },
   },
   mutations: {
     getUserInfo(state:any, user:object):void{
