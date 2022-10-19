@@ -47,7 +47,7 @@ export default defineComponent({
 })
 </script>
 
-<style lang="sass" scoped>
+<style lang="sass">
 .character
     &__stats
         display: flex

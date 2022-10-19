@@ -1,5 +1,8 @@
 <template lang="pug">
 section.main__character
+    .main__character-bg
+        video(autoplay muted loop repeat)
+            source(:src="require(`@/assets/videos/bg/${getElementBG(char.element)}`)")
     .main__character-info 
         .main__character-info-descr 
             h2.main__character-charname {{char.name}}
@@ -36,6 +39,28 @@ export default defineComponent({
     components: {
         CharacterArtefact,
         CharacterCommonStats
+    },
+    methods: {
+       getElementBG(element:string):string{
+            if(element === "Piro" || element === "Pyro"){
+                return "bg_pyro.webm";
+            }else if(element === "Hydro"){
+                return "bg_hydro.webm";
+            }else if(element === "Electro"){
+                return "bg_electro.webm";
+            }else if(element === "Anemo"){
+                return "bg_anemo.webm";
+            }else if(element === "Cryo"){
+                return "bg_cryo.webm";
+            }else if(element === "Geo"){
+                return "bg_geo.webm";
+            }else if(element === undefined || element === "Dendro"){
+                return "bg_dendro.webm"
+            }
+            else {
+                return "";
+            }
+       } 
     }
 })
 </script>
