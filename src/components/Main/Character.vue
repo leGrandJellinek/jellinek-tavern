@@ -1,5 +1,5 @@
 <template lang="pug">
-section.main__character
+section.main__character(:class="{active: char.active}")
     .main__character-bg
         video(autoplay muted loop repeat)
             source(:src="require(`@/assets/videos/bg/${getElementBG(char.element)}`)")

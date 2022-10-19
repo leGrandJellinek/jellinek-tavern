@@ -12,7 +12,9 @@
     .main__search-characters
         .main__search-character(
             v-for="char in traveler.characters"
-            :key="char.id")
+            :key="char.id"
+            @click="characterActive(char.id)"
+            )
             .main__search-charicon(:class="{rarityfive: char.rarity === 5}")
                 img(:src="char.icons.avatar")
             p.main__search-charlvl {{char.level}}
@@ -20,10 +22,13 @@
 
 <script lang="ts">
 import { defineComponent } from "@vue/runtime-core"
-
+import { mapActions } from "vuex";
 export default defineComponent({
 props: {
     traveler: Object
+},
+methods: {
+    ...mapActions (["characterActive"]),
 }
 })
 </script>

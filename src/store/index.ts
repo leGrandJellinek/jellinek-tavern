@@ -1,10 +1,11 @@
 import { createStore } from 'vuex'
 import { enkaNetwork } from "enkanetwork";
+import { useRoute } from 'vue-router';
 const enka = new enkaNetwork({language: "RU"});
 const TimaID = 726865921;
 export default createStore({
   state: {
-    user: null,
+    user: null as any,
     menuList: [
       {
         id:1,
@@ -35,15 +36,29 @@ export default createStore({
     },
   },
   mutations: {
-    getUserInfo(state:any, user:object):void{
+    getUserInfo(state:any, user:any):void{
+      for(let i = 0; i < user.characters.length; i++){
+        user.characters[i].active = false
+      }
+      user.characters[0].active = true
       console.log(user);
       state.user = user 
+    },
+    characterActive(state, id):void{
+      for(let i = 0; i < state.user.characters.length; i++){
+        const char = state.user.characters[i];
+        char.active = false
+        if(char.id === id) char.active = true
+      }
     }
   },
   actions: {
     async getUserInfo({commit} , UID:string):Promise<void>{
       const user = await enka.fetchUser(+UID);
       commit("getUserInfo", user)
+    },
+    async characterActive({commit},id:number):Promise<void>{
+      commit("characterActive",id)
     }
   },
   modules: {
