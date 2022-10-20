@@ -1,0 +1,55 @@
+@include media(1199px)
+    .main
+        &__character
+            &.active
+                flex-wrap: wrap
+                justify-content: center
+                column-gap: 90px
+
+@include media(991px)
+    .main
+        &__search
+            &-characters
+                flex-wrap: wrap
+        &__container
+            &-result 
+                display: flex
+                flex-direction: column
+                align-items: center
+        &__character
+            flex-direction: column
+            align-items: center
+            width: 430px
+            &.active 
+                gap: 0px
+    
+@include media(767px)
+    .header
+        &__nav
+            &-menu
+                display: none
+                position: absolute
+                transition: all 500ms ease
+                background: #1b1d2a
+                top: 0
+                right: 0
+                height: 100vh
+                width: 100vw
+                z-index: 9999
+                &.active
+                    display: flex 
+                    flex-direction: column
+                    gap: 20px
+                    justify-content: center 
+                    align-items: center
+            &-link 
+                font-size: 28px
+            &-btn 
+                display: block
+            &-close 
+                display: block
+
+@include media(443px)
+    .main
+        &__character
+            width: 350px

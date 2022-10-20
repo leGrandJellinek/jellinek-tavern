@@ -62,6 +62,7 @@
         position: relative
         &.active
             display: flex
+            justify-content: space-between
         &-bg
             position: absolute
             top: 0
@@ -86,7 +87,9 @@
         &-info
             height: 475px
             padding: 20px
-            width: 442px
+            max-width: 400px
+            min-width: 350px
+            width: 100%
             display: flex
             flex-direction: column
             justify-content: space-between
@@ -103,9 +106,11 @@
             display: flex
             flex-direction: column
             justify-content: space-between
-            width: 365px
+            max-width: 365px
+            min-width: 350px
+            width: 100%
         &-artefact
-            background: rgba(0,0,0,.26)
+            background: #2b2b2b42
             border-radius: 0.3em
             overflow: hidden
             height: 82px
