@@ -1,7 +1,6 @@
 import { createStore } from 'vuex'
-import { enkaNetwork } from "enkanetwork";
-import { useRoute } from 'vue-router';
-const enka = new enkaNetwork({language: "RU"});
+import {EnkaNetwork} from "enkanetwork"
+const enka = new EnkaNetwork({language: "RU", caching: false})
 const TimaID = 726865921;
 export default createStore({
   state: {
@@ -54,7 +53,7 @@ export default createStore({
   },
   actions: {
     async getUserInfo({commit} , UID:string):Promise<void>{
-      const user = await enka.fetchUser(+UID);
+      const user = await enka.fetchUser(+UID, "RU");
       commit("getUserInfo", user)
     },
     async characterActive({commit},id:number):Promise<void>{

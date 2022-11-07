@@ -1,7 +1,7 @@
 <template lang="pug">
 main.main 
     .main__container 
-        Search
+        Search(v-if="!getTraveler")
         .main__container-result(v-if="getTraveler !== null")
             SearchBlock(
             :traveler="getTraveler"
