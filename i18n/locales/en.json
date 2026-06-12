@@ -1,0 +1,82 @@
+{
+  "nav": {
+    "home": "Home",
+    "base": "Knowledge Base",
+    "player": "Player Lookup"
+  },
+  "home": {
+    "subtitle": "A mini-platform: knowledge base, tools and player lookup. Come in, pull up a chair.",
+    "features": {
+      "baseTitle": "Knowledge Base",
+      "baseText": "Guides, notes and reference materials in one place.",
+      "playerTitle": "Player Lookup",
+      "playerText": "View Genshin Impact accounts by UID: characters, builds, artifacts."
+    }
+  },
+  "base": {
+    "title": "Knowledge Base",
+    "subtitle": "Game reference and materials.",
+    "sectionReference": "Reference",
+    "sectionArticles": "Articles",
+    "articlesSoon": "Guides and notes are coming soon."
+  },
+  "ref": {
+    "search": "Search…",
+    "rarity": "Rarity",
+    "all": "All",
+    "empty": "Nothing found",
+    "loading": "Loading…",
+    "back": "To reference",
+    "count": "Found: {n}",
+    "categories": {
+      "avatar": "Characters",
+      "weapon": "Weapons",
+      "reliquary": "Artifacts",
+      "material": "Materials"
+    },
+    "categoryText": {
+      "avatar": "All playable characters: elements, weapons, regions.",
+      "weapon": "Swords, bows, catalysts, polearms and claymores.",
+      "reliquary": "Artifact sets and their bonuses.",
+      "material": "Resources, ascension, talent books."
+    },
+    "char": {
+      "constellationTitle": "Constellation",
+      "region": "Region",
+      "weaponType": "Weapon",
+      "birthday": "Birthday",
+      "cv": "Voice actors",
+      "talents": "Talents",
+      "constellations": "Constellations",
+      "story": "Description"
+    },
+    "weapon": {
+      "type": "Type",
+      "mainStat": "Main stat",
+      "subStat": "Secondary stat",
+      "effect": "Passive"
+    }
+  },
+  "elements": {
+    "Fire": "Pyro",
+    "Water": "Hydro",
+    "Grass": "Dendro",
+    "Electric": "Electro",
+    "Wind": "Anemo",
+    "Rock": "Geo",
+    "Ice": "Cryo"
+  },
+  "player": {
+    "title": "Player Lookup",
+    "subtitle": "View Genshin Impact accounts by UID",
+    "inputPlaceholder": "Enter player UID",
+    "search": "Search",
+    "loading": "Loading…",
+    "error": "Failed to load player",
+    "world": "World",
+    "achievements": "Achievements"
+  },
+  "char": {
+    "level": "Lv."
+  }
+}

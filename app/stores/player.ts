@@ -67,7 +67,8 @@ export const usePlayerStore = defineStore('player', () => {
   const loading = ref(false)
   const error = ref<string | null>(null)
 
-  async function fetchUser(uid: string) {
+  // lang — код локали i18n (ru/en/ja); пробрасываем в серверный роут.
+  async function fetchUser(uid: string, lang = 'ru') {
     const clean = uid.trim()
     if (!clean) return
 
@@ -75,9 +76,10 @@ export const usePlayerStore = defineStore('player', () => {
     error.value = null
     try {
       // $fetch авто-импортирован Nuxt'ом; ходит в server/api/uid/[uid]
-      data.value = await $fetch<PlayerResponse>(`/api/uid/${clean}`)
+      data.value = await $fetch<PlayerResponse>(`/api/uid/${clean}`, { query: { lang } })
     } catch (e: any) {
-      error.value = e?.data?.message || 'Не удалось загрузить игрока'
+      // Сообщение локализуем в компоненте; здесь — просто флаг ошибки.
+      error.value = e?.data?.statusMessage || e?.data?.message || 'error'
       data.value = null
     } finally {
       loading.value = false

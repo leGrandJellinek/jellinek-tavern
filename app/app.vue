@@ -1,5 +1,10 @@
 <template>
-  <!-- NuxtPage рендерит текущий роут из app/pages/ -->
+  <!-- Стартовый загрузочный экран в стиле Genshin -->
+  <SiteLoader />
+
+  <!-- Лейаут (сайдбар) оборачивает текущую страницу -->
   <NuxtRouteAnnouncer />
-  <NuxtPage />
+  <NuxtLayout>
+    <NuxtPage />
+  </NuxtLayout>
 </template>

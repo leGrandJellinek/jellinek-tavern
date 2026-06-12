@@ -1,0 +1,82 @@
+{
+  "nav": {
+    "home": "ホーム",
+    "base": "ナレッジベース",
+    "player": "プレイヤー検索"
+  },
+  "home": {
+    "subtitle": "ミニプラットフォーム：ナレッジベース、ツール、プレイヤー検索。どうぞお入りください。",
+    "features": {
+      "baseTitle": "ナレッジベース",
+      "baseText": "ガイド、メモ、参考資料を一か所に。",
+      "playerTitle": "プレイヤー検索",
+      "playerText": "UIDで原神アカウントを表示：キャラクター、ビルド、聖遺物。"
+    }
+  },
+  "base": {
+    "title": "ナレッジベース",
+    "subtitle": "ゲーム資料とデータ。",
+    "sectionReference": "データベース",
+    "sectionArticles": "記事",
+    "articlesSoon": "ガイドやメモは近日公開予定です。"
+  },
+  "ref": {
+    "search": "検索…",
+    "rarity": "レアリティ",
+    "all": "すべて",
+    "empty": "見つかりませんでした",
+    "loading": "読み込み中…",
+    "back": "データベースへ",
+    "count": "{n} 件",
+    "categories": {
+      "avatar": "キャラクター",
+      "weapon": "武器",
+      "reliquary": "聖遺物",
+      "material": "素材"
+    },
+    "categoryText": {
+      "avatar": "全プレイアブルキャラ：元素、武器、地域。",
+      "weapon": "片手剣・弓・法器・長柄・両手剣。",
+      "reliquary": "聖遺物セットとセット効果。",
+      "material": "素材、突破、天賦本。"
+    },
+    "char": {
+      "constellationTitle": "命ノ星座",
+      "region": "地域",
+      "weaponType": "武器",
+      "birthday": "誕生日",
+      "cv": "声優",
+      "talents": "天賦",
+      "constellations": "命ノ星座",
+      "story": "説明"
+    },
+    "weapon": {
+      "type": "種類",
+      "mainStat": "基礎ステータス",
+      "subStat": "サブステータス",
+      "effect": "武器スキル"
+    }
+  },
+  "elements": {
+    "Fire": "炎",
+    "Water": "水",
+    "Grass": "草",
+    "Electric": "雷",
+    "Wind": "風",
+    "Rock": "岩",
+    "Ice": "氷"
+  },
+  "player": {
+    "title": "プレイヤー検索",
+    "subtitle": "UIDで原神アカウントを表示",
+    "inputPlaceholder": "プレイヤーUIDを入力",
+    "search": "検索",
+    "loading": "読み込み中…",
+    "error": "プレイヤーの読み込みに失敗しました",
+    "world": "世界",
+    "achievements": "アチーブメント"
+  },
+  "char": {
+    "level": "Lv."
+  }
+}

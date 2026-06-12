@@ -10,6 +10,11 @@ export default defineEventHandler(async (event) => {
     throw createError({ statusCode: 400, statusMessage: 'Некорректный UID' })
   }
 
+  // Язык из ?lang (i18n: ru/en/ja) → код enka (ja → jp).
+  const langParam = getQuery(event).lang
+  const ENKA_LANG: Record<string, string> = { ru: 'ru', en: 'en', ja: 'jp' }
+  const lang = ENKA_LANG[String(langParam)] ?? 'ru'
+
   const enka = await ensureEnkaReady()
 
   let user
@@ -19,10 +24,10 @@ export default defineEventHandler(async (event) => {
     throw createError({ statusCode: 404, statusMessage: 'Игрок не найден или витрина закрыта' })
   }
 
-  // Хелпер: человекочитаемое имя из TextAssets (с фолбэком на любой язык).
+  // Хелпер: человекочитаемое имя из TextAssets на выбранном языке (с фолбэком).
   const ru = (t: { get: (lang?: any) => string } | null | undefined) => {
     try {
-      return t?.get('ru') ?? null
+      return t?.get(lang) ?? null
     } catch {
       return null
     }
