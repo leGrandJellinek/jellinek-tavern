@@ -1,0 +1,36 @@
+// ───────────────────────────────────────────────────────────
+// Глобальные стили. Пока минимальный сброс + шрифт.
+// Полный геншин-редизайн (золотые рамки, цвета стихий) — отдельным этапом.
+// ───────────────────────────────────────────────────────────
+
+@font-face {
+  font-family: 'HYWenHei';
+  src: url('/fonts/HYWenHei-85W.ttf') format('truetype');
+  font-display: swap;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100vh;
+  font-family: 'HYWenHei', system-ui, -apple-system, sans-serif;
+  background: #0f1015;
+  color: #ece5d8;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
