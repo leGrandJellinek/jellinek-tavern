@@ -7,18 +7,59 @@ export interface PlayerResponse {
   level: number
   signature: string
   worldLevel: number
+  achievements: number
+  profilePictureUrl: string | null
   namecardUrl: string | null
   characters: PlayerCharacter[]
 }
 
+export interface Stat {
+  name: string | null
+  value: string
+}
+
 export interface PlayerCharacter {
   id: number
-  name: string
+  name: string | null
   element: string | null
+  elementName: string | null
   level: number
+  maxLevel: number
   rarity: number
   friendship: number
   iconUrl: string | null
+  gachaUrl: string | null
+  constellationLevel: number
+  stats: {
+    maxHp: Stat | null
+    atk: Stat | null
+    def: Stat | null
+    critRate: Stat | null
+    critDamage: Stat | null
+    elementMastery: Stat | null
+    chargeEfficiency: Stat | null
+    damageBonus: Stat | null
+  }
+  talents: { id: number; name: string | null; icon: string | null; level: number }[]
+  constellations: { id: number; name: string | null; icon: string | null; unlocked: boolean }[]
+  weapon: {
+    name: string | null
+    icon: string | null
+    rarity: number
+    level: number
+    refinement: number
+    stats: (Stat | null)[]
+  } | null
+  artifacts: {
+    id: number
+    slot: string | null
+    setName: string | null
+    icon: string | null
+    rarity: number
+    level: number
+    mainstat: Stat | null
+    substats: (Stat | null)[]
+  }[]
 }
 
 export const usePlayerStore = defineStore('player', () => {

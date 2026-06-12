@@ -1,4 +1,4 @@
-import { EnkaClient } from 'enka-network-api'
+import { EnkaClient, defaultImageBaseUrls } from 'enka-network-api'
 
 // Синглтон: один клиент на весь процесс сервера.
 // enka-network-api скачивает игровые данные (имена, иконки, стихии) в кэш —
@@ -11,6 +11,11 @@ export function getEnka(): EnkaClient {
     client = new EnkaClient({
       defaultLanguage: 'ru',
       cacheDirectory: '.enka-cache',
+      // homdgcat.wiki (приоритет 12) не резолвится по DNS и роняет иконки
+      // новых персонажей — выкидываем его, чтобы иконки шли с enka.network/yatta.
+      imageBaseUrls: defaultImageBaseUrls.filter(
+        (base) => !base.url.includes('homdgcat.wiki'),
+      ),
     })
   }
   return client
