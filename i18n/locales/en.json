@@ -17,8 +17,15 @@
     "title": "Knowledge Base",
     "subtitle": "Game reference and materials.",
     "sectionReference": "Reference",
+    "sectionTools": "Tools",
     "sectionArticles": "Articles",
     "articlesSoon": "Guides and notes are coming soon."
+  },
+  "map": {
+    "title": "Interactive Map",
+    "text": "Teyvat map by HoYoLAB: collectibles, chests, regions.",
+    "openNew": "Open in new tab",
+    "hint": "If the map didn't load, open it in a new tab."
   },
   "ref": {
     "search": "Search…",
@@ -52,9 +59,32 @@
     },
     "weapon": {
       "type": "Type",
-      "mainStat": "Main stat",
+      "stats": "Stats",
+      "baseAtk": "Base ATK",
       "subStat": "Secondary stat",
-      "effect": "Passive"
+      "ascension": "Ascension",
+      "ascensionMat": "Ascension materials",
+      "phase": "Phase",
+      "maxLevel": "Max level",
+      "effect": "Passive",
+      "atLvl1": "at Lv.1"
+    },
+    "fightprop": {
+      "FIGHT_PROP_ATTACK_PERCENT": "ATK",
+      "FIGHT_PROP_CRITICAL": "CRIT Rate",
+      "FIGHT_PROP_CRITICAL_HURT": "CRIT DMG",
+      "FIGHT_PROP_ELEMENT_MASTERY": "Elemental Mastery",
+      "FIGHT_PROP_CHARGE_EFFICIENCY": "Energy Recharge",
+      "FIGHT_PROP_HP_PERCENT": "HP",
+      "FIGHT_PROP_DEFENSE_PERCENT": "DEF",
+      "FIGHT_PROP_PHYSICAL_ADD_HURT": "Physical DMG Bonus",
+      "FIGHT_PROP_HEAL_ADD": "Healing Bonus"
+    },
+    "artifact": {
+      "setBonus": "Set bonuses",
+      "pieces": "Set pieces",
+      "bonus2": "2-Piece",
+      "bonus4": "4-Piece"
     }
   },
   "elements": {

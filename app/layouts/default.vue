@@ -113,6 +113,8 @@ onBeforeUnmount(() => document.removeEventListener('click', onClickOutside))
   top: 0;
   align-self: start;
   height: 100vh;
+  // Выше контента (iframe карты имеет z-index), иначе меню языка уходит под карту.
+  z-index: 20;
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -348,6 +350,7 @@ onBeforeUnmount(() => document.removeEventListener('click', onClickOutside))
 }
 
 .content {
+  position: relative;
   min-width: 0;
   padding: 0;
 }

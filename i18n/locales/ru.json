@@ -17,8 +17,15 @@
     "title": "База знаний",
     "subtitle": "Справочник по игре и материалы.",
     "sectionReference": "Справочник",
+    "sectionTools": "Инструменты",
     "sectionArticles": "Статьи",
     "articlesSoon": "Скоро здесь появятся гайды и заметки."
+  },
+  "map": {
+    "title": "Интерактивная карта",
+    "text": "Карта Тейвата от HoYoLAB: точки сбора, сундуки, регионы.",
+    "openNew": "Открыть в новой вкладке",
+    "hint": "Если карта не загрузилась — откройте её в новой вкладке."
   },
   "ref": {
     "search": "Поиск…",
@@ -52,9 +59,32 @@
     },
     "weapon": {
       "type": "Тип",
-      "mainStat": "Основная характеристика",
+      "stats": "Характеристики",
+      "baseAtk": "Базовая атака",
       "subStat": "Доп. характеристика",
-      "effect": "Пассивный навык"
+      "ascension": "Возвышение",
+      "ascensionMat": "Материалы возвышения",
+      "phase": "Фаза",
+      "maxLevel": "Макс. уровень",
+      "effect": "Пассивный навык",
+      "atLvl1": "на 1 ур."
+    },
+    "fightprop": {
+      "FIGHT_PROP_ATTACK_PERCENT": "Сила атаки",
+      "FIGHT_PROP_CRITICAL": "Шанс крит. попадания",
+      "FIGHT_PROP_CRITICAL_HURT": "Крит. урон",
+      "FIGHT_PROP_ELEMENT_MASTERY": "Мастерство стихий",
+      "FIGHT_PROP_CHARGE_EFFICIENCY": "Восст. энергии",
+      "FIGHT_PROP_HP_PERCENT": "HP",
+      "FIGHT_PROP_DEFENSE_PERCENT": "Защита",
+      "FIGHT_PROP_PHYSICAL_ADD_HURT": "Бонус физ. урона",
+      "FIGHT_PROP_HEAL_ADD": "Бонус лечения"
+    },
+    "artifact": {
+      "setBonus": "Бонусы набора",
+      "pieces": "Части набора",
+      "bonus2": "2 предмета",
+      "bonus4": "4 предмета"
     }
   },
   "elements": {

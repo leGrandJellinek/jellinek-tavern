@@ -41,6 +41,7 @@ const SHORT_NAME: Record<string, string> = {
   'Восст. энергии': 'Восст. энергии',
   'Мастерство стихий': 'Мастерство',
   'Сила атаки': 'Сила атаки',
+  'Базовая сила атаки': 'База атаки',
 }
 const shortName = (s: Stat | null | undefined) => {
   const n = s?.name ?? ''
@@ -130,7 +131,10 @@ const mainStats = computed(() => {
               <span class="chip">Ур. {{ char.weapon.level }}/90</span>
             </div>
             <div class="weapon__stats">
-              <span v-for="(ws, i) in char.weapon.stats" :key="i">{{ ws?.value }}</span>
+              <span v-for="(ws, i) in char.weapon.stats" :key="i" class="weapon__stat">
+                <span class="weapon__stat-name">{{ shortName(ws) }}</span>
+                <b>{{ ws?.value }}</b>
+              </span>
             </div>
           </div>
         </div>
@@ -400,9 +404,23 @@ const mainStats = computed(() => {
 
   &__stats {
     display: flex;
-    gap: 16px;
-    font-size: 0.92rem;
-    opacity: 0.9;
+    flex-wrap: wrap;
+    gap: 6px 18px;
+    font-size: 0.88rem;
+  }
+
+  &__stat {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 6px;
+
+    &-name {
+      opacity: 0.6;
+    }
+
+    b {
+      font-weight: 700;
+    }
   }
 }
 
@@ -463,7 +481,8 @@ const mainStats = computed(() => {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-width: 104px;
+    width: 104px;
+    flex-shrink: 0;
     text-align: center;
     border-right: 1px solid rgba(255, 255, 255, 0.08);
     padding-right: 12px;

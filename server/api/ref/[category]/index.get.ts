@@ -15,7 +15,8 @@ export default defineEventHandler(async (event) => {
   const items = Object.values(data.items ?? {}).map((it: any) => ({
     id: it.id,
     name: it.name,
-    rank: it.rank ?? 0,
+    // У артефактов нет rank — берём макс. редкость набора из levelList.
+    rank: it.rank ?? (Array.isArray(it.levelList) && it.levelList.length ? Math.max(...it.levelList) : 0),
     icon: amberIcon(it.icon),
     element: it.element ?? null,
     weaponType: it.weaponType ?? it.type ?? null,

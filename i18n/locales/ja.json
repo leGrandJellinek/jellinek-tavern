@@ -17,8 +17,15 @@
     "title": "ナレッジベース",
     "subtitle": "ゲーム資料とデータ。",
     "sectionReference": "データベース",
+    "sectionTools": "ツール",
     "sectionArticles": "記事",
     "articlesSoon": "ガイドやメモは近日公開予定です。"
+  },
+  "map": {
+    "title": "インタラクティブマップ",
+    "text": "HoYoLABのテイワットマップ：採集物、宝箱、地域。",
+    "openNew": "新しいタブで開く",
+    "hint": "マップが読み込まれない場合は、新しいタブで開いてください。"
   },
   "ref": {
     "search": "検索…",
@@ -52,9 +59,32 @@
     },
     "weapon": {
       "type": "種類",
-      "mainStat": "基礎ステータス",
+      "stats": "ステータス",
+      "baseAtk": "基礎攻撃力",
       "subStat": "サブステータス",
-      "effect": "武器スキル"
+      "ascension": "突破",
+      "ascensionMat": "突破素材",
+      "phase": "段階",
+      "maxLevel": "最大レベル",
+      "effect": "武器スキル",
+      "atLvl1": "Lv.1時"
+    },
+    "fightprop": {
+      "FIGHT_PROP_ATTACK_PERCENT": "攻撃力",
+      "FIGHT_PROP_CRITICAL": "会心率",
+      "FIGHT_PROP_CRITICAL_HURT": "会心ダメージ",
+      "FIGHT_PROP_ELEMENT_MASTERY": "元素熟知",
+      "FIGHT_PROP_CHARGE_EFFICIENCY": "元素チャージ効率",
+      "FIGHT_PROP_HP_PERCENT": "HP",
+      "FIGHT_PROP_DEFENSE_PERCENT": "防御力",
+      "FIGHT_PROP_PHYSICAL_ADD_HURT": "物理ダメージ",
+      "FIGHT_PROP_HEAL_ADD": "治療効果"
+    },
+    "artifact": {
+      "setBonus": "セット効果",
+      "pieces": "セット部位",
+      "bonus2": "2セット",
+      "bonus4": "4セット"
     }
   },
   "elements": {

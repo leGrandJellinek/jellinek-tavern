@@ -29,6 +29,15 @@ const categories = [
       </NuxtLink>
     </section>
 
+    <h2 class="section">{{ $t('base.sectionTools') }}</h2>
+    <section class="grid">
+      <NuxtLink to="/base/map" class="rcard">
+        <span class="rcard__icon"><AppIcon name="map" :size="22" /></span>
+        <h3 class="rcard__title">{{ $t('map.title') }}</h3>
+        <p class="rcard__text">{{ $t('map.text') }}</p>
+      </NuxtLink>
+    </section>
+
     <h2 class="section">{{ $t('base.sectionArticles') }}</h2>
     <div class="empty">
       <AppIcon name="book" :size="30" class="empty__icon" />

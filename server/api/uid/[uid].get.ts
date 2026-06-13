@@ -101,7 +101,8 @@ export default defineEventHandler(async (event) => {
               rarity: char.weapon.weaponData.stars,
               level: char.weapon.level,
               refinement: char.weapon.refinementRank,
-              stats: char.weapon.weaponStats.map(stat),
+              // Только ненулевые характеристики (база атаки + вторичный стат).
+              stats: char.weapon.weaponStats.filter((s) => s.rawValue !== 0).map(stat),
             }
           : null,
 
@@ -112,7 +113,8 @@ export default defineEventHandler(async (event) => {
           setName: ru(art.artifactData.set?.name),
           icon: art.artifactData.icon?.url ?? null,
           rarity: art.artifactData.stars,
-          level: art.level,
+          // enka хранит уровень 1-индексированным (1 = +0), реальный = level - 1.
+          level: art.level - 1,
           mainstat: stat(art.mainstat),
           substats: art.substats.total.map(stat),
         })),

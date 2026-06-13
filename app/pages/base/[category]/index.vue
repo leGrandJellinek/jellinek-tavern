@@ -66,9 +66,7 @@ const filtered = computed(() => {
 
 <template>
   <main class="page">
-    <NuxtLink to="/base" class="back">
-      <AppIcon name="back" :size="16" /> {{ t('ref.back') }}
-    </NuxtLink>
+    <BackLink to="/base" />
 
     <header class="page__head">
       <h1 class="page__title">{{ t(`ref.categories.${category}`) }}</h1>
@@ -138,20 +136,7 @@ const filtered = computed(() => {
 .page {
   max-width: 1240px;
   margin: 0 auto;
-  padding: 48px 24px 64px;
-}
-
-.back {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 0.85rem;
-  opacity: 0.6;
-  margin-bottom: 16px;
-
-  &:hover {
-    opacity: 1;
-  }
+  padding: 72px 24px 64px;
 }
 
 .page__head {
